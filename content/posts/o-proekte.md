@@ -4,5 +4,7 @@ draft = false
 title = 'О проекте'
 +++
 
-![Мой 3D принтер](/images/image.png)
-![Мой 3D принтер2](/images/image2.png)
+<div class="image-gallery">
+    ![Принтер 1](/images/image1.png)
+    ![Принтер 2](/images/image2.png)
+</div>
