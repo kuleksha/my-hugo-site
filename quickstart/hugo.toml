@@ -1,4 +1,3 @@
-baseURL = 'https://kuleksha.github.io/my-hugo-site/'
-locale = 'ru-ru'
+baseURL = 'https://example.org/'
+locale = 'en-us'
 title = 'Тася жопа'
-
