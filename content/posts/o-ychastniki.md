@@ -3,6 +3,18 @@ date = '2026-04-26T17:36:33+03:00'
 draft = false
 title = 'Участники'
 +++
+styles = """
+<style>
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  .container, h1, .site-header {
+    text-align: center;
+  }
+</style>
+"""
 | Группа | ФИО |
 | :--- | :--- |
 | 251-3213 | Абакаев Илья Александрович |
