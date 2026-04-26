@@ -5,6 +5,6 @@ title = 'Многоцветный 3D принтер'
 
 theme = 'minimal'
 
-
+canonifyURLs = true
 
    
