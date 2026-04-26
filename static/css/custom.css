@@ -1,0 +1,11 @@
+.header-title, .site-title, h1 {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    background-color: #808080;
+    border: 2px solid #666666;
+    color: #ffffff !important;
+    font-weight: bold;
+    width: fit-content;
+}
