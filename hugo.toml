@@ -3,3 +3,5 @@ languageCode = 'ru'
 title = 'Многоцветный 3D принтеры'
 theme = 'minimal'
 
+[params]
+    customCSS = ["css/custom.css"]
