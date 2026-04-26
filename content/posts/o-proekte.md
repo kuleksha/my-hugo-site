@@ -4,4 +4,4 @@ draft = false
 title = 'О проекте'
 +++
 
-![Мой 3D принтер](images/image.png)
+![Мой 3D принтер](/images/image.png)
