@@ -8,55 +8,65 @@
     <h1 style="text-align: center; background-color: #1a2a6c; color: white; padding: 20px 0; margin: 0; width: 100%;">
     {{ .Site.Title }}
 </h1>
-    <style>
-  /* Стили для списка ссылок (Посты) */
-  ul {
-    list-style: none; /* Убираем точки */
-    padding: 0;
-    display: flex; /* Выстраиваем в ряд */
-    flex-wrap: wrap; /* Если не влезут, перенесутся на новую строку */
-    justify-content: center; /* Центрируем кнопки */
-    gap: 10px; /* Расстояние между кнопками */
-    margin-top: 30px;
-  }
-
-  ul li a {
-    text-decoration: none; /* Убираем подчеркивание */
-    background-color: #f4f4f4; /* Светло-серый фон кнопки */
-    color: #000080; /* Темно-синий текст */
-    padding: 10px 20px;
-    border-radius: 5px; /* Скругленные углы */
-    border: 1px solid #000080;
-    transition: 0.3s; /* Плавный переход цвета */
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  ul li a:hover {
-    background-color: #000080; /* Синий фон при наведении */
-    color: white; /* Белый текст при наведении */
-  }
-
-  h2 {
-    text-align: center; /* Центрируем заголовок "Посты" */
+   <style>
+  .main-content {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+    font-size: 1.1em;
+    text-align: center; /* Центрируем текст аннотации */
     font-family: sans-serif;
     color: #333;
   }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Увеличили расстояние между кнопками */
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+
+  .menu-list li a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000080;
+    /* УВЕЛИЧЕННЫЕ КНОПКИ */
+    padding: 18px 35px; 
+    font-size: 1.2em;
+    
+    border-radius: 10px;
+    border: 2px solid #000080;
+    transition: 0.3s;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Добавили легкую тень для объема */
+  }
+
+  .menu-list li a:hover {
+    background-color: #000080;
+    color: white;
+    transform: translateY(-3px); /* Кнопка чуть подпрыгивает при наведении */
+  }
 </style>
 
-    
-<div style="max-width: 900px; margin: 20px auto; padding: 0 20px; line-height: 1.6; font-size: 1.1em;">
+<!-- 2. БЛОК С АННОТАЦИЕЙ (БЕЗ ДУБЛЕЙ) -->
+<div class="main-content">
     {{ .Content }}
 </div>
 
-    <hr>
-    {{ .Content }}
-    <hr>
-    <h2>Посты</h2>
-    <ul>
-    {{ range where .Site.RegularPages "Section" "posts" }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+<!-- 3. БОЛЬШИЕ КНОПКИ НА МЕСТЕ ПОВТОРА -->
+<ul class="menu-list">
+    {{ range .Site.RegularPages }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
     {{ end }}
-    </ul>
+</ul>
 </body>
 </html>
