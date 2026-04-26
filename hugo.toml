@@ -4,4 +4,4 @@ title = 'Многоцветный 3D принтер'
 theme = 'minimal'
 
 [params]
-    customCSS = ["css/custom.css"]
+    custom_css = ["css/custom.css"]
