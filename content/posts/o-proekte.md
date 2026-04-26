@@ -7,4 +7,4 @@ title = 'О проекте'
 
 | | |
 |:---:|:---:|
-| ![Картинка 1](/images/image.png) | ![Картинка 2](/images/image.png) |
+| ![Картинка 1](/images/image.png) | ![Картинка 2](/images/image2.png) |
