@@ -4,4 +4,4 @@ draft = false
 title = 'О проекте'
 +++
 
-![Мой 3D принтер](FOTKA/image.png)
+![Мой 3D принтер](my-hugo-site/content/posts/FOTKA/image.png)
