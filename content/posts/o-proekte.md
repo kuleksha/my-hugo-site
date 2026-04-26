@@ -5,6 +5,7 @@ title = 'О проекте'
 +++
 
 
-| | |
-|:---:|:---:|
-| ![Картинка 1](/images/image.png) | ![Картинка 2](/images/image2.png) |
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="/images/image.png" style="width: 30%; height: auto;">
+    <img src="/images/image.png" style="width: 30%; height: auto;">
+</div>
