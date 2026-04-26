@@ -5,3 +5,4 @@ title = 'О проекте'
 +++
 
 ![Мой 3D принтер](/images/image.png)
+![Мой 3D принтер2](/images/image2.png)
