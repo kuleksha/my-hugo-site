@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Site.Title }}</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>{{ .Site.Title }}</h1>
+    <hr>
+    {{ .Content }}
+    <hr>
+    <h2>Посты</h2>
+    <ul>
+    {{ range where .Site.RegularPages "Section" "posts" }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+</body>
+</html>
