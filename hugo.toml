@@ -2,3 +2,8 @@ baseURL = 'https://kuleksha.github.io/my-hugo-site/'
 languageCode = 'ru'
 title = 'Многоцветный 3D принтер'
 theme = 'minimal'
+[params]
+    description = "Все о многоцветной 3D печати и настройке принтеров"
+    # Пример настройки цвета, если тема 'minimal' это поддерживает:
+    accentColor = "#ff5733" 
+    showStorageStats = true
