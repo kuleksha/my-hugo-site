@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+  /* Стили для красивой таблицы */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-family: sans-serif; /* Чтобы таблица выглядела современно */
+  }
+
+  /* Синяя шапка таблицы */
+  table thead th {
+    background-color: #000080;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #000080;
+  }
+
+  /* Ячейки таблицы */
+  table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+
+  /* Чередование цветов строк (зебра) */
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Подсветка при наведении */
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+</style>
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <meta charset="utf-8">
 </head>
