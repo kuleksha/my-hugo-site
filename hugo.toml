@@ -1,6 +1,6 @@
 baseURL = 'https://kuleksha.github.io/my-hugo-site/'
 languageCode = 'ru'
-title = 'Многоцветный 3D принтеры'
+title = 'Многоцветный 3D принтерц'
 
 
 theme = 'minimal'
