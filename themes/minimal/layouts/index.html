@@ -8,6 +8,43 @@
     <h1 style="text-align: center; background-color: #1a2a6c; color: white; padding: 20px 0; margin: 0; width: 100%;">
     {{ .Site.Title }}
 </h1>
+    <style>
+  /* Стили для списка ссылок (Посты) */
+  ul {
+    list-style: none; /* Убираем точки */
+    padding: 0;
+    display: flex; /* Выстраиваем в ряд */
+    flex-wrap: wrap; /* Если не влезут, перенесутся на новую строку */
+    justify-content: center; /* Центрируем кнопки */
+    gap: 10px; /* Расстояние между кнопками */
+    margin-top: 30px;
+  }
+
+  ul li a {
+    text-decoration: none; /* Убираем подчеркивание */
+    background-color: #f4f4f4; /* Светло-серый фон кнопки */
+    color: #000080; /* Темно-синий текст */
+    padding: 10px 20px;
+    border-radius: 5px; /* Скругленные углы */
+    border: 1px solid #000080;
+    transition: 0.3s; /* Плавный переход цвета */
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  ul li a:hover {
+    background-color: #000080; /* Синий фон при наведении */
+    color: white; /* Белый текст при наведении */
+  }
+
+  h2 {
+    text-align: center; /* Центрируем заголовок "Посты" */
+    font-family: sans-serif;
+    color: #333;
+  }
+</style>
+
+    
 <div style="max-width: 900px; margin: 20px auto; padding: 0 20px; line-height: 1.6; font-size: 1.1em;">
     {{ .Content }}
 </div>
