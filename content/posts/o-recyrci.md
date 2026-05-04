@@ -4,32 +4,26 @@ draft = false
 title = 'Ресурсы'
 +++
 
-## Рекомендации по выбору материалов
+## Практические рекомендации по выбору пластика
 
-- **Для точности** — PLA.
-- **Для термостойкости** — ABS или Nylon.
-- **Для прочности и универсальности** — PETG.
-- **Для гибкости** — TPU.
-- Не смешивать материалы без необходимости.
-- Для многоматериальных изделий использовать механические соединения, а не адгезию.
-- Хранить материалы в сухих боксах, особенно PETG и Nylon.
-- Использовать правильные поверхности — PEI, стекло, текстурированные пластины.
-
----
+* **Для точности** — PLA.
+* **Для термостойкости** — ABS или Nylon.
+* **Для прочности и универсальности** — PETG.
+* **Для гибкости** — TPU.
+* **Совместимость:** Не смешивать материалы без необходимости.
+* **Конструкция:** Для многоматериальных изделий использовать механические соединения, а не адгезию.
+* **Хранение:** Хранить материалы в сухих боксах (особенно PETG и Nylon).
+* **Поверхность:** Использовать правильные поверхности — PEI, стекло или текстурированные пластины.
 
 ## Полный обзор популярных материалов
-
 Основные материалы, которые используются в FDM-печати:
-
-- **PLA** — полилактид, полярный биополимер.
-- **ABS** — сополимер акрилонитрила, бутадиена и стирола.
-- **PETG** — гликол-модифицированный PET, аморфный и гибкий.
-- **TPU** — термопластичный полиуретан, эластомер.
-- **Nylon (PA6, PA12)** — полиамиды, полукристаллические термопласты.
-
+• PLA — полилактид, полярный биополимер.
+• ABS — сополимер акрилонитрила, бутадиена и стирола.
+• PETG — гликол-модифицированный PET, аморфный и гибкий.
+• TPU — термопластичный полиуретан, эластомер.
+• Nylon (PA6, PA12) — полиамиды, полукристаллические термопласты.
 Дополнительно существуют: PC, ASA, HIPS, PP, POM, композиты (GF, CF, Kevlar).
 
----
 
 ## Реализация смены цветов с помощью слайсера
 
@@ -49,3 +43,56 @@ gcode:
     {% else %}
         RESPOND MSG="Unknown tool!"
     {% endif %}
+
+[gcode_macro RIGHT_SIDE]
+description: "Фидинг справа"
+gcode:
+  {% set m1 = params.MOVE1|default(0)|float %}
+  {% set m2 = params.MOVE2|default(100)|float %}
+  {% set speed = params.SPEED|default(50)|float %}
+  {% set accel = params.ACCEL|default(500)|float %}
+  {% set angle = params.ANGLE|default(90)|int %}
+  {% set return_angle = params.RETURN_ANGLE|default(0)|int %}
+  RESPOND MSG="RIGHT_SIDE position {m1}"
+  # позиция каретки
+  MANUAL_STEPPER STEPPER=fil_step1 MOVE={m1} SPEED={speed} ACCEL={accel}
+  G4 P2000
+  # поворот сервопривода
+  SET_SERVO SERVO=fil_servo1 ANGLE={angle}
+  G4 P2000
+  # подача филамента
+  MANUAL_STEPPER STEPPER=fil_step2 MOVE={m2} SPEED={speed} ACCEL={accel}
+  G4 P2000
+  # возврат фидера
+  MANUAL_STEPPER STEPPER=fil_step2 MOVE=0 SPEED={speed} ACCEL={accel}
+  G4 P2000
+  # возврат серво
+  SET_SERVO SERVO=fil_servo1 ANGLE={return_angle}
+  G4 P2000
+  
+[gcode_macro LEFT_SIDE]
+description: "Фидинг слева"
+gcode:
+  {% set m1 = params.MOVE1|default(0)|float %}
+  {% set m2 = params.MOVE2|default(100)|float %}
+  {% set speed = params.SPEED|default(50)|float %}
+  {% set accel = params.ACCEL|default(500)|float %}
+  {% set angle = params.ANGLE|default(90)|int %}
+  {% set return_angle = params.RETURN_ANGLE|default(0)|int %}
+  RESPOND MSG="LEFT_SIDE position {m1}"
+  # позиция каретки
+  MANUAL_STEPPER STEPPER=fil_step3 MOVE={m1} SPEED={speed} ACCEL={accel}
+  G4 P2000
+  # поворот серво
+  SET_SERVO SERVO=fil_servo2 ANGLE={angle}
+  G4 P2000
+  # подача филамента
+  MANUAL_STEPPER STEPPER=fil_step4 MOVE={m2} SPEED={speed} ACCEL={accel}
+  G4 P2000
+  # возврат подачи
+  MANUAL_STEPPER STEPPER=fil_step4 MOVE={-m2} SPEED={speed} ACCEL={accel}
+  G4 P2000
+  # возврат серво
+  SET_SERVO SERVO=fil_servo2 ANGLE={return_angle}
+  G4 P2000
+```
