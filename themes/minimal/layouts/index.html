@@ -6,21 +6,21 @@
 </head>
 <body>
    
-    <h1 style="text-align: center; background-color: #1a2a6c; color: white; padding: 20px 0; margin: 0; width: 100%;">
+<h1 style="text-align: center; background-color: #1a2a6c; color: white; padding: 20px 0; margin: 0; width: 100%; font-family: sans-serif;">
     {{ .Site.Title }}
 </h1>
-   <style>
+
+<style>
   .main-content {
     max-width: 850px;
     margin: 30px auto;
     padding: 0 20px;
     line-height: 1.8;
-    font-size: 1.1em;
-    text-align: center; /* Центрируем текст аннотации */
+    font-size: 1.15em;
+    text-align: center;
     font-family: sans-serif;
     color: #333;
   }
-
 
   .menu-list {
     list-style: none;
@@ -28,42 +28,46 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Увеличили расстояние между кнопками */
-    margin: 40px auto;
-    max-width: 1000px;
+    gap: 20px;
+    margin: 40px auto; /* Отступ сверху и снизу от кнопок */
   }
 
   .menu-list li a {
     text-decoration: none;
     background-color: #ffffff;
     color: #000080;
-    /* УВЕЛИЧЕННЫЕ КНОПКИ */
     padding: 18px 35px; 
-    font-size: 1.2em;
-    
+    font-size: 1.2em;   
     border-radius: 10px;
     border: 2px solid #000080;
     transition: 0.3s;
     font-family: sans-serif;
     font-weight: bold;
     display: inline-block;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Добавили легкую тень для объема */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
   .menu-list li a:hover {
     background-color: #000080;
     color: white;
-    transform: translateY(-3px); /* Кнопка чуть подпрыгивает при наведении */
+    transform: translateY(-3px);
   }
 </style>
 
-<!-- 2. БЛОК С АННОТАЦИЕЙ (БЕЗ ДУБЛЕЙ) -->
+<!-- 1. АННОТАЦИЯ -->
 <div class="main-content">
     {{ .Content }}
 </div>
-    <hr style="border: 0; height: 10px; background: #1a2a6c; width: 100%; margin: 40px auto;">
 
-<!-- 3. БОЛЬШИЕ КНОПКИ НА МЕСТЕ ПОВТОРА -->
+<!-- 2. СИНЯЯ ЛИНИЯ -->
+<hr style="border: 0; height: 10px; background: #1a2a6c; width: 100%; margin: 0;">
+
+<!-- 3. КАРТИНКА ВО ВСЮ ШИРИНУ С ЗАТЕМНЕНИЕМ -->
+<div style="width: 100vw; left: 50%; right: 50%; margin-left: -50vw; position: relative; overflow: hidden; background: black;">
+    <img src="/images/Снимок1.JPG" alt="3D Принтер" style="width: 100%; height: auto; display: block; opacity: 0.7; filter: brightness(0.8);">
+</div>
+
+<!-- 4. КНОПКИ (ТЕПЕРЬ ПОД КАРТИНКОЙ) -->
 <ul class="menu-list">
     {{ range .Site.RegularPages }}
         {{ if .Title }} 
@@ -73,5 +77,8 @@
         {{ end }} 
     {{ end }}
 </ul>
+
+</body>
+</html>
 </body>
 </html>
