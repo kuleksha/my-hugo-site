@@ -22,4 +22,4 @@ title = 'Журнал'
 
 | | |
 |:---:|:---:|
-| ![Картинка 5](/posts/CagrWIfRfWoecUgmdHmpd4OsJofo0BWmZzjt7Bb983TAJyeSLFOWPhxina0L6NvKQXa8IUwNthL9GVU79Aur5NY45.jpg| 
+| ![Картинка 5](/posts/CagrWIfRfWoecUgmdHmpd4OsJofo0BWmZzjt7Bb983TAJyeSLFOWPhxina0L6NvKQXa8IUwNthL9GVU79Aur5NY45.jpg)| 
