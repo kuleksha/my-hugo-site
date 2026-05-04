@@ -5,7 +5,7 @@ title = 'Журнал'
 +++
 
 | | |
-**Результат на 2025-2026 год**
+</center>**Результат на 2025-2026 год**</center>
 |:---:|:---:|
 | ![Картинка 1](/images/6gXPqjWSdJ0BsIL81NP7pNKnc8u5-w7NB3kU85G_YulNAc2YNs2WQBs23a2nuvLxH0NzZ238HDmbPNB8JYv96eWd.jpg)  |Предварительная работа 3Д принтера
 | ![Картинка 2](/images/5R0pqjkuISCpPX97rxMXkEdYwDlu6cKLSrzCpU_wi3NkuJnqc9popdQ8CNRvluCFDvwL5RnGRJ381gzo_Q0cchHn2.jpg) |Деталь для системы экструзии филамента
@@ -14,8 +14,8 @@ title = 'Журнал'
 
 
 | | |
+</center>**Результат на 2024-2025 год**</center>
 |:---:|:---:|
-**Результат на 2024-2025 год**
 |
 ![Картинка 5](/images/CagrWIfRfWoecUgmdHmpd4OsJofo0BWmZzjt7Bb983TAJyeSLFOWPhxina0L6NvKQXa8IUwNthL9GVU79Aur5NY45.jpg)
 |
