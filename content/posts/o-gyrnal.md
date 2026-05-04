@@ -5,4 +5,4 @@ title = 'Журнал'
 +++
 | | |
 |:---:|:---:|
-| ![Картинка 1](/images/image.png) | ![Картинка 2](/images/image2.png) |
+| ![Картинка 1](/posts/6gXPqjWSdJ0BsIL81NP7pNKnc8u5-w7NB3kU85G_YulNAc2YNs2WQBs23a2nuvLxH0NzZ238HDmbPNB8JYv96eWd.jpg) | ![Картинка 2](/images/image2.png) |
