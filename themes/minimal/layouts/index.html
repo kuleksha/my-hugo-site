@@ -16,7 +16,7 @@
     margin: 30px auto;
     padding: 0 20px;
     line-height: 1.8;
-    font-size: 1.15em;
+    font-size: 1.1em;
     text-align: center;
     font-family: sans-serif;
     color: #333;
@@ -62,14 +62,14 @@
 <!-- 2. СИНЯЯ ЛИНИЯ -->
 <hr style="border: 0; height: 10px; background: #1a2a6c; width: 100%; margin: 0;">
 
-<!-- 3. БЛОК: КАРТИНКА ВО ВСЮ ШИРИНУ + КНОПКИ ПОВЕРХ -->
+<!-- 3. БЛОК: КНОПКИ ВВЕРХУ ПОВЕРХ КАРТИНКИ -->
 <div style="position: relative; width: 100vw; left: 50%; right: 50%; margin-left: -50vw; overflow: hidden; line-height: 0;">
     
-    <!-- КАРТИНКА С ЗАТЕМНЕНИЕМ -->
-    <img src="/images/Снимок1.JPG" alt="3D Принтер" style="width: 100%; height: auto; display: block; filter: brightness(0.6);">
+    <!-- ЗАТЕМНЕННАЯ КАРТИНКА -->
+    <img src="/images/Снимок1.JPG" alt="3D Принтер" style="width: 100%; height: auto; display: block; filter: brightness(0.5);">
 
-    <!-- КНОПКИ ПОВЕРХ КАРТИНКИ (В центре) -->
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; z-index: 10;">
+    <!-- КНОПКИ СРАЗУ ПОД ЛИНИЕЙ (ВВЕРХУ КАРТИНКИ) -->
+    <div style="position: absolute; top: 40px; left: 0; right: 0; z-index: 10;">
         <ul class="menu-list">
             {{ range .Site.RegularPages }}
                 {{ if .Title }} 
