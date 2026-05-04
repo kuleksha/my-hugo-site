@@ -11,9 +11,10 @@ title = 'Журнал'
 | ![Картинка 3](/images/TVDGn8DMwcyYPc8hpnYuvK--mz4pt9S-X86_X_rI_MR8bjpt68-YJr-NOIPj66_yDGKDNZ_eY1DfD81jo3FjmlTN3.jpg) |Сборочный узел
 | ![Картинка 4](/images/DYdTLD7snq1byuiMd3ISt1RJ385Zs1fW4FQr1a-rYTpaSHMuV_GN7rXGU1ObLmKfdp-iOsNnmQXPJA4YH9nTR-Az4.jpg) |Диаграмма Ганта |
 
-**Результат на 2024-2025 год**
+
 | | |
 |:---:|:---:|
+**Результат на 2024-2025 год**
 |
 ![Картинка 5](/images/CagrWIfRfWoecUgmdHmpd4OsJofo0BWmZzjt7Bb983TAJyeSLFOWPhxina0L6NvKQXa8IUwNthL9GVU79Aur5NY45.jpg)
 |
