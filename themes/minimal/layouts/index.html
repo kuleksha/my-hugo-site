@@ -29,22 +29,22 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin: 40px auto; /* Отступ сверху и снизу от кнопок */
+    margin: 0;
   }
 
   .menu-list li a {
     text-decoration: none;
     background-color: #ffffff;
     color: #000080;
-    padding: 18px 35px; 
-    font-size: 1.2em;   
+    padding: 18px 35px; /* Твой размер */
+    font-size: 1.2em;   /* Твой размер */
     border-radius: 10px;
     border: 2px solid #000080;
     transition: 0.3s;
     font-family: sans-serif;
     font-weight: bold;
     display: inline-block;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   }
 
   .menu-list li a:hover {
@@ -62,23 +62,25 @@
 <!-- 2. СИНЯЯ ЛИНИЯ -->
 <hr style="border: 0; height: 10px; background: #1a2a6c; width: 100%; margin: 0;">
 
-<!-- 3. КАРТИНКА ВО ВСЮ ШИРИНУ С ЗАТЕМНЕНИЕМ -->
-<div style="width: 100vw; left: 50%; right: 50%; margin-left: -50vw; position: relative; overflow: hidden; background: black;">
-    <img src="/images/Снимок1.JPG" alt="3D Принтер" style="width: 100%; height: auto; display: block; opacity: 0.7; filter: brightness(0.8);">
+<!-- 3. БЛОК: КАРТИНКА ВО ВСЮ ШИРИНУ + КНОПКИ ПОВЕРХ -->
+<div style="position: relative; width: 100vw; left: 50%; right: 50%; margin-left: -50vw; overflow: hidden; line-height: 0;">
+    
+    <!-- КАРТИНКА С ЗАТЕМНЕНИЕМ -->
+    <img src="/images/Снимок1.JPG" alt="3D Принтер" style="width: 100%; height: auto; display: block; filter: brightness(0.6);">
+
+    <!-- КНОПКИ ПОВЕРХ КАРТИНКИ (В центре) -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; z-index: 10;">
+        <ul class="menu-list">
+            {{ range .Site.RegularPages }}
+                {{ if .Title }} 
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }} 
+            {{ end }}
+        </ul>
+    </div>
 </div>
 
-<!-- 4. КНОПКИ (ТЕПЕРЬ ПОД КАРТИНКОЙ) -->
-<ul class="menu-list">
-    {{ range .Site.RegularPages }}
-        {{ if .Title }} 
-        <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }} 
-    {{ end }}
-</ul>
-
-</body>
-</html>
 </body>
 </html>
