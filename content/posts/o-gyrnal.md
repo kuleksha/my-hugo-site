@@ -12,4 +12,8 @@ title = 'Журнал'
 | ![Картинка 4](/images/DYdTLD7snq1byuiMd3ISt1RJ385Zs1fW4FQr1a-rYTpaSHMuV_GN7rXGU1ObLmKfdp-iOsNnmQXPJA4YH9nTR-Az4.jpg) |Диаграмма Ганта |
 
 **Результат на 2024-2025 год**
+| | |
+|:---:|:---:|
+|
 ![Картинка 5](/images/CagrWIfRfWoecUgmdHmpd4OsJofo0BWmZzjt7Bb983TAJyeSLFOWPhxina0L6NvKQXa8IUwNthL9GVU79Aur5NY45.jpg)
+|
