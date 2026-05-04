@@ -66,9 +66,11 @@
 <!-- 3. БОЛЬШИЕ КНОПКИ НА МЕСТЕ ПОВТОРА -->
 <ul class="menu-list">
     {{ range .Site.RegularPages }}
-    <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
+        {{ if .Title }} 
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }} 
     {{ end }}
 </ul>
 </body>
